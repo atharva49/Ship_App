@@ -4,4 +4,4 @@ class Company:
         self.com_year = com_year
         self.us_state = us_state
 
-#git changes reflected on github repository?
+#git changes reflected on github repository? 
