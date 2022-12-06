@@ -3,3 +3,5 @@ class Company:
         self.com_name = com_name
         self.com_year = com_year
         self.us_state = us_state
+
+#git changes reflected on github repository?
