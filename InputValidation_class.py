@@ -37,7 +37,7 @@ class InputValidation:
 
     def company_incorporation_state_valid():
         try:
-            com_incop_st = int(input('Enter the year company was incorporated into'))
+            com_incop_st = str(input('Enter the State in which company was incorporated'))
             return com_incop_st
         except:
             print("Something went wrong")
