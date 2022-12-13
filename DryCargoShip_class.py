@@ -3,8 +3,8 @@ import Revenue_class
 import DB_class
 
 class DryCargoShip(Ship_class.Ship):
-    def __init__(self,ship_name,year_built,crew_size,trip_id,com_name,com_year,us_state,size_cat,percent_full):
-        super(DryCargoShip,self).__init__(ship_name,year_built,crew_size,trip_id,com_name,com_year,us_state)
+    def __init__(self,ship_name,year_built,crew_size,com_name,com_year,us_state,size_cat,percent_full,trip_id):
+        super(DryCargoShip,self).__init__(ship_name,year_built,crew_size,com_name,com_year,us_state,trip_id)
         self.size_cat = size_cat
         self.percent_full = percent_full
 
