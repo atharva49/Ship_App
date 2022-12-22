@@ -1,4 +1,6 @@
 import sys
+import OwnException
+
 class InputValidation:
 
 
@@ -11,8 +13,13 @@ class InputValidation:
 
     def build_yr_valid():
         try:
-          built_yr = int(input('Enter the year the ship was  built \n'))
-          return built_yr
+            built_yr = int(input('Enter the year the ship was  built \n'))
+            if built_yr>999 and built_yr <10000:
+                return built_yr
+            raise OwnException.DigitGreaterThanFour
+        except OwnException.DigitGreaterThanFour:
+            print('Enter a four digit year \n')
+            InputValidation.build_yr_valid()
         except TypeError as e:
             print(f'Data Entered is not number \n please Enter Number \n TE \n {e} \n')
             InputValidation.build_yr_valid()
@@ -47,7 +54,12 @@ class InputValidation:
     def company_incorporation_year_valid():
         try:
             com_incop_yr = int(input('Enter the year company was incorporated into \n'))
-            return com_incop_yr
+            if com_incop_yr>999 and com_incop_yr <10000:
+                return com_incop_yr
+            raise OwnException.DigitGreaterThanFour
+        except OwnException.DigitGreaterThanFour:
+            print('Enter a four digit year \n')
+            InputValidation.company_incorporation_year_valid()
         except TypeError as e:
             print(f'Data Entered is not number \n please Enter Number \n TE \n {e} \n')
             InputValidation.company_incorporation_year_valid()
@@ -82,7 +94,12 @@ class InputValidation:
     def percentage_valid():
         try:
             per = int(input('Enter the percentange full \n'))
-            return per
+            if per>100 and per<0:
+                return per
+            raise OwnException.DigitGreaterThanFour
+        except OwnException.DigitGreaterThanFour:
+            print('Enter percent between 0 and 100 \n')
+            InputValidation.percentage_valid()
         except TypeError as e:
             print(f'Data Entered is not number \n please Enter Number \n TE \n {e} \n')
             InputValidation.percentage_valid()
@@ -124,7 +141,12 @@ class InputValidation:
     def capacity_valid():
         try:
             capacity = int(input('Enter the capacity in percentage\n'))
-            return capacity
+            if capacity>100 and capacity<0:
+                return capacity
+            raise OwnException.DigitGreaterThanFour
+        except OwnException.DigitGreaterThanFour:
+            print('Enter percent between 0 and 100 \n')
+            InputValidation.capacity_valid()
         except TypeError as e:
             print(f'Data Entered is not number \n please Enter Number \n TE \n {e} \n')
             InputValidation.capacity_valid()
