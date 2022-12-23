@@ -15,6 +15,9 @@ if __name__ == '__main__':
             elif ip==2:# Print ship data
                 p1 = PrintData_class.PrintData()
                 print(p1.parse_tables())
+            elif ip==3:# Print ship data
+                p1 = PrintData_class.PrintData()
+                print(p1.print_ship_name_revenue())
                 pass
             elif ip==5:# Exit the program
                 repeat_flag = False
